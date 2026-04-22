@@ -35,7 +35,7 @@ interface RitualHabit {
   order_index: number;
 }
 
-function SortableHabitItem({ habit, onDelete }: { habit: RitualHabit; onDelete: (id: string) => void }) {
+function SortableHabitItem({ habit, onDelete }: { key?: React.Key; habit: RitualHabit; onDelete: (id: string) => void | Promise<void> }) {
   const {
     attributes,
     listeners,

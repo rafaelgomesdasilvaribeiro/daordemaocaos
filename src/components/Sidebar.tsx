@@ -12,7 +12,8 @@ import {
   Flame,
   LogOut,
   ChevronRight,
-  ChevronLeft
+  ChevronLeft,
+  Network
 } from 'lucide-react';
 import { View } from '../types';
 import { cn } from '../lib/utils';
@@ -45,6 +46,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
     { id: 'law-of-attraction', label: 'Lei da Atração', icon: Sparkles },
     { id: 'rituals', label: 'Rituais', icon: Sunrise },
     { id: 'challenge', label: 'Desafio', icon: Flame },
+    { id: 'mental-map', label: 'Mapa Mental', icon: Network },
   ];
 
   return (

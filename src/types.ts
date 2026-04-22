@@ -1,6 +1,6 @@
 export type Priority = 'low' | 'medium' | 'high';
 
-export type View = 'dashboard' | 'tasks' | 'calendar' | 'projects' | 'kanban' | 'settings' | 'knowledge' | 'notes' | 'law-of-attraction' | 'rituals' | 'challenge';
+export type View = 'dashboard' | 'tasks' | 'calendar' | 'projects' | 'kanban' | 'settings' | 'knowledge' | 'notes' | 'law-of-attraction' | 'rituals' | 'challenge' | 'mental-map';
 
 export interface Task {
   id: string;
@@ -30,4 +30,26 @@ export interface Project {
 export interface Column {
   id: string;
   title: string;
+}
+
+export interface MentalMap {
+  id: string;
+  title: string;
+  created_at: string;
+  updated_at: string;
+}
+
+export interface MentalMapNode {
+  id: string;
+  map_id: string;
+  data: any;
+  position: { x: number; y: number };
+  type: string;
+}
+
+export interface MentalMapEdge {
+  id: string;
+  map_id: string;
+  source: string;
+  target: string;
 }

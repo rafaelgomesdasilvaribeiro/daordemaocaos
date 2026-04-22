@@ -10,6 +10,7 @@ import { Notes } from './components/Notes';
 import { LawOfAttraction } from './components/LawOfAttraction';
 import { Rituals } from './components/Rituals';
 import { Challenge } from './components/Challenge';
+import { MentalMap } from './components/MentalMap';
 import { View, Task, Column, Project } from './types';
 import { motion, AnimatePresence } from 'motion/react';
 import { Bell, Search, Settings, Menu, X } from 'lucide-react';
@@ -411,6 +412,8 @@ export default function App() {
         return <Rituals />;
       case 'challenge':
         return <Challenge />;
+      case 'mental-map':
+        return <MentalMap />;
       default: 
         return <Dashboard onAddProject={addProject} projects={projectsWithStats} tasks={tasks} />;
     }
@@ -472,6 +475,7 @@ export default function App() {
                  currentView === 'law-of-attraction' ? 'Lei da Atração' :
                  currentView === 'rituals' ? 'Rituais' :
                  currentView === 'challenge' ? 'Desafio 21 Dias' :
+                 currentView === 'mental-map' ? 'Mapa Mental' :
                  currentView.replace('-', ' ')}
               </span>
             </div>
